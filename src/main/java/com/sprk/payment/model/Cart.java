@@ -4,14 +4,17 @@ import jakarta.persistence.*;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 
-@Entity
-@Table(name = "PaymentDetails")
+
 @Data
 @RequiredArgsConstructor
-public class Payment {
+public class Cart {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long paymentId;
+    private Long orderId;
 
-    private Long totalAmount;
+    private String productName;
+
+    private int productAmount;
+
+    private int totalAmount;
 }

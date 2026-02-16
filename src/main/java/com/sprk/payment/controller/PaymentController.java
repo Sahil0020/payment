@@ -17,7 +17,7 @@ public class PaymentController {
 
     @GetMapping("/order/{orderId}")
     public Cart order(@PathVariable Long orderId){
-        Cart orderCart=restTemplate.getForObject("http://localhost:8080/order/"+orderId,Cart.class);
+        Cart orderCart=restTemplate.getForObject("http://cart/order/"+orderId,Cart.class);
 
         return orderCart;
     }
